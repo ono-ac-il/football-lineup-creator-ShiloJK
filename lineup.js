@@ -12,3 +12,19 @@ const players = [
     { name: 'Buffon', position: 'goalkeeper' },
     { name: 'Casillas', position: 'goalkeeper' }
 ]
+
+const goalkeepers = players.filter(function(players) {
+    return players.position == 'goalkeeper';
+})
+
+const defenders = players.filter(function(players) {
+    return players.position == 'defender';
+})
+
+const midfielders = players.filter(function(players) {
+    return players.position == 'midfielder';
+})
+const forwards = players.filter(function(players) {
+    return players.position == 'midfielder';
+})
+
