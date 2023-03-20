@@ -1,3 +1,2 @@
 # football-lineup-creator-ShiloJK
-football-lineup-creator-ShiloJK created by GitHub Classroom
-uuuu
+בגדול הקוד רץ בהתאם להנחיות יעקב, אם ישנם הנחיות שלא ששמתם לב שלא מימשתי אשמח לדעת ולתקן
