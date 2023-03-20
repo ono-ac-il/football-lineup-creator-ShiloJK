@@ -25,6 +25,6 @@ const midfielders = players.filter(function(players) {
     return players.position == 'midfielder';
 })
 const forwards = players.filter(function(players) {
-    return players.position == 'midfielder';
+    return players.position == 'forward';
 })
 
