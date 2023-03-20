@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The football lineup maker</title>
+    <link rel="stylesheet" href="lineup.css">
+</head>
+
+<body>
+    <h1>The lineup table</h1>
+    <div class="lineup-container">
+        <table class="lineup">
+            <tr>
+                <td colspan="5" class="title">Goalkeeper</td>
+            </tr>
+            <tr>
+                <td colspan="5">
+                    <select id="pos1"></select>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="1" class="title">Wingback</td>
+                <td colspan="3" width="60%" class="title">Defender</td>
+                <td colspan="1" class="title">Wingback</td>
+
+            <tr>
+                <td colspan="1">
+                    <select id="def1"></select>
+                </td>
+                <td colspan="1">
+                    <select id="def2"></select>
+                </td>
+                <td colspan="1">
+                    <select id="def3"></select>
+                </td>
+                <td colspan="1">
+                    <select id="def4"></select>
+                </td>
+                <td colspan="1">
+                    <select id="def5"></select>
+                </td>
+            </tr>
+            <tr class="title">
+                <td colspan="1" class="title">Winger</td>
+
+                <td colspan="3" class="title">Midfield</td>
+                <td colspan="1" class="title">Winger</td>
+
+            </tr>
+            <tr>
+                <td colspan="1">
+                    <select id="mid1"></select>
+                </td>
+                <td colspan="1">
+                    <select id="mid2"></select>
+                </td>
+                <td colspan="1">
+                    <select id="mid3"></select>
+                </td>
+                <td colspan="1">
+                    <select id="mid4"></select>
+                </td>
+                <td colspan="1">
+                    <select id="mid5"></select>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="1"></td>
+                <td colspan="3" class="title">Striker</td>
+                <td colspan="1"></td>
+            </tr>
+            <tr>
+                <td colspan="1"></td>
+                <td colspan="1">
+                    <select id="st1"></select>
+                </td>
+                <td colspan="1">
+                    <select id="st2"></select>
+                </td>
+                <td colspan="1">
+                    <select id="st3"></select>
+                </td>
+                <td colspan="1"></td>
+            </tr>
+        </table>
+
+    </div>
+    <script src="lineup.js"></script>
+</body>
+
+</html>
