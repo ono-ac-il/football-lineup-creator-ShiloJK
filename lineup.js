@@ -79,11 +79,76 @@ document.getElementById('st1').innerHTML = mappedStrikers.join('');
 document.getElementById('st2').innerHTML = mappedStrikers.join('');
 document.getElementById('st3').innerHTML = mappedStrikers.join('');
 
-const btn = document.getElementById('sum');
+
+
+// פונקציה לחישוב מספר השחקנים בהרכב
+function count() {
+    var countPlayers = 0
+    var forCount = [document.getElementById('pos1').value,
+    document.getElementById('def1').value,
+    document.getElementById('def2').value,
+    document.getElementById('def3').value,
+    document.getElementById('def4').value,
+    document.getElementById('def5').value,
+    document.getElementById('mid2').value,
+    document.getElementById('mid3').value,
+    document.getElementById('mid4').value,
+    document.getElementById('mid1').value,
+    document.getElementById('mid5').value,
+    document.getElementById('st1').value,
+    document.getElementById('st2').value,
+    document.getElementById('st3').value]
+    for (var i = 0; i < forCount.length; i++) {
+
+        if (forCount[i] != '') {
+            countPlayers++;
+        }
+    }
+    var x = 0
+    if (countPlayers == 11) {
+        stop()
+        document.getElementById("stopBtn").addEventListener('click', () => {
+            lineUpConsole()
+            x++;
+            if(x != 1) {
+                console.clear()
+                reload()
+            }
+            
+        })   
+    }
+
+}
+
+// פונקצייה להדפסת הרכב
 function lineUpConsole() {
     console.log("                           " + document.getElementById("pos1").value) +
         console.log("   " + document.getElementById("def1").value + "        " + document.getElementById("def2").value + "        " + document.getElementById("def3").value + "        " + document.getElementById("def4").value + "        " + document.getElementById("def5").value)
     console.log("   " + document.getElementById("mid1").value + "        " + document.getElementById("mid2").value + "        " + document.getElementById("mid3").value + "        " + document.getElementById("mid4").value + "        " + document.getElementById("mid5").value)
     console.log("             " + document.getElementById("st1").value + "        " + document.getElementById("st2").value + "        " + document.getElementById("st3").value)
 }
-btn.addEventListener('click', lineUpConsole);
+
+// משתנה לאינטרבל
+var intervalID = setInterval(count, 1000) 
+
+// פונקציה להתחיל אינטרבל
+function start() {
+    intervalID = setInterval(count, 1000);
+}
+
+
+// פונקציה לעצור אינטרבל
+function stop() {
+    clearInterval(intervalID);
+}
+
+
+
+// פונקציה לרענון הדף לאחר הקשה כפולה על הגש הרכב
+function reload() {
+    setTimeout(() => {
+        document.location.reload();
+    });
+}
+
+
